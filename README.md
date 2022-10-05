@@ -23,30 +23,13 @@
 3. Run the program as follows:
 - Usage: `monty <file.m>`
 - Ex: `./monty ./bytecodes/00.m`
+The Monty language
+Monty 0.98 is a scripting language that is first compiled into Monty byte codes (Just like Python). It relies on a unique stack, with specific instructions to manipulate it. The goal of this project is to create an interpreter for Monty ByteCodes files.
 
-There are multiple `.m` files to choose from in the bytcodes files that run different Opcode functionality. Below is a table of all the Opcode options. Each file in the bytcodes folder contains different Opcodes that run their specific functionality.
+Monty byte code files
 
-| Opcode Name   | Opcode Description |
-| :-----------: | :------------------- |
-| push          | *pushes an element on to the stack* |
-| pall          | *prints all the values on the stack, starting from the top* |
-| pint          | *prints the value at the top of the stack* |
-| pop           | *removes the top element of the stack* |
-| swap          | *swaps the top two elements of the stack* |
-| add           | *adds the top two elements of the stack* |
-| nop           | *doesn't do anything* |
-| sub           | *subtracts the top element of the stack from the second top element of the stack* |
-| div           | *divides the second top element of the stack by the top element of the stack* |
-| mul           | *multiplies the second top element of the stack with the top element of the stack* |
-| mod           | *computes the modulus of the second top element of the stack by the top element of the stack* |
-| comments (#)  | *add a # to the beginning of the line to comment in the file* |
-| pchar         | *prints the ASCII equivalent of the number at the top of the stack* |
-| pstr          | *prints the ASCII equivalent of the numbers stored in each element in the stack, starting from the top* |
-| rotl          | *rotates the top element of the stack to the bottom of the stack* |
-| rotr          | *rotates the bottom element of the stack to the top of the stack* |
-
-## Example
-```
+Files containing Monty byte codes usually have the .m extension. Most of the industry uses this standard but it is not required by the specification of the language. There is not more than one instruction per line. There can be any number of spaces before or after the opcode and its argument:
+##EXAMPLE```
 vagrant@vagrant-ubuntu-trusty-64:~$ cat -e bytecodes/000.m
 push 0$
 push 1$
